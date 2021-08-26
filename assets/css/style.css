@@ -12,6 +12,10 @@ html{
 .clear{
     clear: both;
 }
+.text-white{
+    color: #fff !important;
+
+}
 
 /*
 1. Từ ngoài vào trong
@@ -168,6 +172,83 @@ html{
     width: 154px;
     border-radius: 4px;
 }
+/* Tuor section */
+.tuor-section{
+    background-color: #000;
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;  
+}
+.ticket-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border: solid 1px #ccc;
+    color: #757575;
+    list-style-type: none;
+}
+.ticket-list .sold-out{
+    background-color: #f44336;
+    padding: 3px 8px;
+    margin-left: 16px;
+}
+.ticket-list .quanlity{
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-right: 16px;
+    padding: 4px 8px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -3px;
+}
+/* Places */
+.tuor-places{
+    margin: 32px -8px -8px 0;
+    padding-bottom: 48px;
+}
+.place-item{
+    float: left;
+    width: 33.3333333%;
+    padding: 0 8px;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover {
+    opacity: 0.6;
+}
+.place-content{
+    background-color: #fff;
+    padding: 15px;
+    font-size: 15px;
+}
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+.place-desrciption{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.place-buy-btn{
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.place-buy-btn:hover{
+    background-color: #ccc;
+}
+
 #footer{
 
 }
