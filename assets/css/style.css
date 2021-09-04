@@ -113,6 +113,11 @@ html{
 #nav .nav-arrow-down{
     font-size: 14px;
 }
+
+#header .menu-btn {
+    color: #fff;
+}
+#header .menu-mobile-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;  
@@ -121,10 +126,25 @@ html{
     background-color: #f44336;
     cursor: pointer;
 }
+#header .menu-mobile-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+    color: #000;
+}
+
+#header .menu-mobile-btn,
 #header .search-icon{
     color: #fff;
     font-size: 20px;
     line-height: 46px;
+}
+#header .menu-mobile-btn{
+    display: none;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
 }
 
 #nav .subnav{
@@ -144,13 +164,14 @@ html{
 #nav > li > a{
     color: #fff;
     text-transform: uppercase;
+    display: block;
 }
 
 #nav li a{
     text-decoration: none;
     line-height: 46px;
     padding: 0px 24px;
-    display: inline-block;
+    display: block;
 }
 #nav > li:hover > a,
 #nav .subnav li:hover a{
@@ -160,11 +181,13 @@ html{
 #nav li:hover .subnav{
     display: block;
 }
-/* https://www.w3schools.com/w3images/chicago.jpg */
+/* 
+https://lh3.googleusercontent.com/Ju8t4vIvDo5dTDvTS0U4t0gpmUa4N_HxHla47-LlXbxpCbdIS4OV9Bo0M5c_5fJTPaf_Rt3ut68J55-zGT3lkBdKlHmlmW1eDch7Oh17fMwNHhpakPSkl2rxwengt1uzlLi4lzz_57jWAe6MFBmr_U35cD2anIXosP5_xUV2NzaXPz7_ezkCSDvNl2K-VWaITkM0auzVUhtuzaJ30u8q52pQFWAXz_wfMVVZnM3Z9u3bIju0I6sfhM8P2-u_D0UFmzHsGrxRGJR7dujgBQrxEyZsvgc1duRgQ7nU3RiRN2qUISDdqzJV9UQdRg5pU53z_moptako4NAG8JVAlzOXt1cIrayNYMjnJOVrpGsMQgEi6NIa06UeSgQI2uJt46nRYUFsplZYeHoVZT_1CK5AaVFJNvzmXWh1jdOwFj59DpIjuoNtlpVDqg6mntumMlJaWrBx3VQy15f-YNyjM21GDxvE5w2SbKOA5kcWPHSnZZTlXBgibaAMAGgZKUJXGj1sy6ydMg04rMSqfZ6dP6fje0Z1kY82xT4tXvmUwiT_PbaXOyIj2M7gEHa0330LDtFG-5j2A2kMStx4eHAG01eS0h9hYtcoERlEhHNvCw39lwIls836k-bqGg-KZIrDWO6Nn5nyaGVd_Wlo1LVPD5n3E37JNA08Kajq9tpOxA7wdz48NAMhhDt4ntwcIWYdaIOA9tysma4690NHoirBybv4_Do=w1605-h903-no?authuser=0
+*/
 #slider{
     margin-top: 46px;
     padding-top: 50%;
-    background: url(https://lh3.googleusercontent.com/Ju8t4vIvDo5dTDvTS0U4t0gpmUa4N_HxHla47-LlXbxpCbdIS4OV9Bo0M5c_5fJTPaf_Rt3ut68J55-zGT3lkBdKlHmlmW1eDch7Oh17fMwNHhpakPSkl2rxwengt1uzlLi4lzz_57jWAe6MFBmr_U35cD2anIXosP5_xUV2NzaXPz7_ezkCSDvNl2K-VWaITkM0auzVUhtuzaJ30u8q52pQFWAXz_wfMVVZnM3Z9u3bIju0I6sfhM8P2-u_D0UFmzHsGrxRGJR7dujgBQrxEyZsvgc1duRgQ7nU3RiRN2qUISDdqzJV9UQdRg5pU53z_moptako4NAG8JVAlzOXt1cIrayNYMjnJOVrpGsMQgEi6NIa06UeSgQI2uJt46nRYUFsplZYeHoVZT_1CK5AaVFJNvzmXWh1jdOwFj59DpIjuoNtlpVDqg6mntumMlJaWrBx3VQy15f-YNyjM21GDxvE5w2SbKOA5kcWPHSnZZTlXBgibaAMAGgZKUJXGj1sy6ydMg04rMSqfZ6dP6fje0Z1kY82xT4tXvmUwiT_PbaXOyIj2M7gEHa0330LDtFG-5j2A2kMStx4eHAG01eS0h9hYtcoERlEhHNvCw39lwIls836k-bqGg-KZIrDWO6Nn5nyaGVd_Wlo1LVPD5n3E37JNA08Kajq9tpOxA7wdz48NAMhhDt4ntwcIWYdaIOA9tysma4690NHoirBybv4_Do=w1605-h903-no?authuser=0) top center/ cover no-repeat;
+    background: url(https://www.w3schools.com/w3images/chicago.jpg) top center/ cover no-repeat;
     color: #fff;
     position: relative;
 }
@@ -189,9 +212,13 @@ html{
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 120px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
 }
 #content .section-heading {
     text-align: center;
@@ -256,7 +283,7 @@ html{
 
 /* Places */
 .tuor-places{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 .place-img{
     width: 100%;
